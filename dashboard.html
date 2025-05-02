@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bank Management System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyBank</div>
+        <ul class="nav-links">
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/accounts">Accounts</a></li>
+            <li><a href="/transfer">Transfer Money</a></li>
+            <li><a href="/transactions">Transaction History</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><button onclick="logout()" class="logout-btn">Logout</button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h1>Welcome to MyBank</h1>
+            <div class="quick-stats">
+                <div class="stat-card">
+                    <h3>Total Balance</h3>
+                    <p id="totalBalance">₹0.00</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Recent Transactions</h3>
+                    <p id="recentTransCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Accounts</h3>
+                    <p id="accountCount">0</p>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h2>Our Services</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Online Banking</h3>
+                        <p>Access your accounts 24/7</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Mobile Banking</h3>
+                        <p>Bank on the go with our mobile app</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Secure Transfers</h3>
+                        <p>Safe and instant money transfers</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Bill Payments</h3>
+                        <p>Pay your bills hassle-free</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@mybank.com</p>
+                <p>Phone: 1800-123-4567</p>
+            </div>
+            <!-- <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div> -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MyBank. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Update the script tag to use the correct path -->
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* Basic styling for the navigation bar */
+.nav {
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: rgb(3, 64, 90);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Submenu for About Us and Services */
+.subabtus,
+.subcontent {
+    display: none; /* Initially hide dropdown */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.subabtus ul,
+.subcontent ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subabtus li,
+.subcontent li {
+    margin: 10px 0;
+}
+
+.subabtus li a,
+.subcontent li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Show the dropdown menu on hover */
+.abtus:hover .subabtus,
+.services:hover .subcontent {
+    display: block;
+}
+
+/* Styling for hover effect */
+.nav-links li a:hover,
+.subabtus li a:hover,
+.subcontent li a:hover {
+    background-color: #666;
+}

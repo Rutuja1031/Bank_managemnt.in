@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - Bank Management System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/transactions.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyBank</div>
+        <ul class="nav-links">
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/accounts">Accounts</a></li>
+            <li><a href="/transfer">Transfer Money</a></li>
+            <li><a href="/transactions" class="active">Transaction History</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><button onclick="logout()" class="logout-btn">Logout</button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Transaction History</h1>
+        <div class="filters">
+            <select id="accountFilter">
+                <option value="all">All Accounts</option>
+            </select>
+            <select id="typeFilter">
+                <option value="all">All Types</option>
+                <option value="transfer">Transfers</option>
+                <option value="deposit">Deposits</option>
+                <option value="withdrawal">Withdrawals</option>
+            </select>
+            <input type="date" id="dateFilter">
+        </div>
+        <table class="transactions-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>From Account</th>
+                    <th>To Account</th>
+                    <th>Description</th>
+                    <th>Amount (₹)</th>
+                </tr>
+            </thead>
+            <tbody class="transactions-list">
+                <!-- Transactions will be loaded here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/js/transactions.js"></script>
+</body>
+</html>

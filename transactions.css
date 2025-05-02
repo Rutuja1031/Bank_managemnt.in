@@ -1,0 +1,179 @@
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filters select, 
+.filters input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.transactions-table th,
+.transactions-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.transactions-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+}
+
+.transactions-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.badge.transfer {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge.deposit {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge.withdrawal {
+    background: #fbe9e7;
+    color: #d84315;
+}
+
+.amount {
+    font-weight: bold;
+}
+
+.transactions-list {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.transaction-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.transaction-type {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    text-transform: capitalize;
+}
+
+.transaction-type.transfer {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.transaction-type.deposit {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.transaction-type.withdrawal {
+    background: #fbe9e7;
+    color: #d84315;
+}
+
+.transaction-date {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.transaction-details {
+    color: #333;
+}
+
+.description {
+    color: #666;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.transactions-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+.amount-credit {
+    color: #27ae60;
+}
+
+.amount-debit {
+    color: #e74c3c;
+}
+
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#currentPage {
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}

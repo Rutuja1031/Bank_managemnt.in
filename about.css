@@ -1,0 +1,17 @@
+/* About Us Section Styling */
+#aboutUs {
+    background-color: #f4f4f4;
+    padding: 50px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#aboutUs h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#aboutUs p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}

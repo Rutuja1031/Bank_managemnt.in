@@ -1,0 +1,311 @@
+/* Basic styles for the navigation bar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav {
+    background-color: #ffffff;
+    color: rgb(3, 64, 90);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+  }
+  
+  .nav .heading {
+    font-size: 35px;
+    margin: 0;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-weight: bold;
+    font-size: large;
+    padding-right: 20px;
+  }
+  
+  .nav-links li {
+    position: relative;
+    padding: 10px 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: rgb(3, 64, 90);
+    font-size: 16px;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+  
+  /* Dropdown styles */
+  .services:hover .subcontent {
+    display: block;
+  }
+  
+  .transaction:hover .money-transfer {
+    display: contents;
+  }
+  
+  .subcontent {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .subcontent ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .subcontent ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+  }
+  
+  .subcontent ul li a:hover {
+    background-color: #575757;
+  }
+  
+  /* Styling for the sub-dropdown under transaction */
+  .money-transfer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 220px; /* Adjust the position of the transaction sub-menu */
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .money-transfer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .money-transfer ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+  }
+  
+  .money-transfer ul li a:hover {
+    background-color: #575757;
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+    }
+  
+    .nav-links li {
+      padding: 10px 0;
+    }
+  
+    .subcontent {
+      min-width: 150px;
+    }
+  
+    .money-transfer {
+      left: 0;
+      min-width: 150px;
+    }
+  }
+  
+  /* Main Content */
+  
+ /* .welcome-box img{
+      max-height: 450px;
+      width: 100%;
+      padding-top: 121px;
+  }
+  
+  .account-btn {
+      text-decoration: none;
+      font-style: normal;
+      color: white;
+      padding: 12px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+      background-color: rgb(6, 38, 111);
+  }
+  
+  .account-btn:hover {
+      background: #575757;
+  }
+  
+  .createacc{
+      text-align: center;
+      border: 2px solid black;
+      width: auto;
+      padding: 10px;
+      border-radius: 0px;
+      text-decoration: none;
+      background-color: #011033;
+  }
+  */
+  /* Main Content Layout */
+.main-content {
+    display: flex;
+    justify-content: space-around; /* Distributes space between items */
+    align-items: center;
+    margin-top: 120px; /* Prevents navbar overlap */
+    padding: 0 20px;
+  }
+  
+  .video-container,
+  .image-container,
+  .login-container {
+    width: 60%; /* Ensures each section takes up 30% of the width */
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding-top: 121px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-box {
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .form-actions {
+    text-align: center;
+  }
+  
+  .login-btn {
+    background-color: #011033;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #575757;
+  }
+  
+  .register-link {
+    text-decoration: none;
+    color: #011033;
+    font-weight: bold;
+  }
+  
+  .register-link:hover {
+    color: #575757;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .video-container,
+    .image-container,
+    .login-container {
+      width: 90%; /* Make each item take up 90% of the width on small screens */
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* .line{
+      display: flex;
+  }
+  
+  .bankline{
+      /* border: 2px solid green; 
+      text-align: center;
+      margin: 20px 20px;
+  }
+  
+  .bankline .l1{
+      font-size: x-large;
+      font-weight: bold;
+      margin: 80px 80px;
+  }
+  
+  .bankline .l2{
+      font-size: larger;
+      margin: 50px 50px;
+  } */
+  
+
+
+  /* service section */
+
+  html{
+    scroll-behavior: smooth;
+  }

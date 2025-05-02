@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts - Bank Management System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/accounts.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyBank</div>
+        <ul class="nav-links">
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/accounts" class="active">Accounts</a></li>
+            <li><a href="/transfer">Transfer Money</a></li>
+            <li><a href="/transactions">Transaction History</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><button onclick="logout()" class="logout-btn">Logout</button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="accounts-header">
+            <h1>Your Accounts</h1>
+            <button onclick="openCreateAccountModal()" class="btn primary-btn">Create New Account</button>
+        </div>
+
+        <div id="accountsList" class="accounts-grid">
+            <!-- Accounts will be loaded here dynamically -->
+        </div>
+    </div>
+
+    <!-- Create Account Modal -->
+    <div id="createAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateAccountModal()">&times;</span>
+            <h2>Create New Account</h2>
+            <form id="createAccountForm">
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <select id="accountType" name="accountType" required>
+                        <option value="savings">Savings Account</option>
+                        <option value="current">Current Account</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="initialDeposit">Initial Deposit (₹)</label>
+                    <input type="number" id="initialDeposit" name="initialDeposit" min="500" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/accounts.js"></script>
+</body>
+</html>

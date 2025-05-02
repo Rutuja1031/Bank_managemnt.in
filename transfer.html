@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Money - Bank Management System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/transfer.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyBank</div>
+        <ul class="nav-links">
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/accounts">Accounts</a></li>
+            <li><a href="/transfer" class="active">Transfer Money</a></li>
+            <li><a href="/transactions">Transaction History</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><button onclick="logout()" class="logout-btn">Logout</button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Transfer Money</h1>
+        <div class="transfer-form">
+            <form id="transferForm">
+                <div class="form-group">
+                    <label for="fromAccount">From Account</label>
+                    <select id="fromAccount" required>
+                        <option value="">Select Account</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="toAccount">To Account</label>
+                    <input type="text" id="toAccount" placeholder="Enter recipient's account number" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount (₹)</label>
+                    <input type="number" id="amount" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" placeholder="Enter transfer description">
+                </div>
+                <button type="submit" class="btn primary-btn">Transfer</button>
+            </form>
+        </div>
+        <!-- Add this after your transfer form -->
+        <div class="recent-transfers">
+            <h2>Recent Transfers</h2>
+            <div class="transfers-list">
+                <!-- Transfers will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/transfer.js"></script>
+</body>
+</html>

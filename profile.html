@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Bank Management System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyBank</div>
+        <ul class="nav-links">
+            <li><a href="/dashboard.html">Home</a></li>
+            <li><a href="/accounts.html">Accounts</a></li>
+            <li><a href="/transfer.html">Transfer Money</a></li>
+            <li><a href="/transactions.html">Transaction History</a></li>
+            <li><a href="/profile.html" class="active">Profile</a></li>
+            <li><button onclick="logout()" class="logout-btn">Logout</button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="/images/default-avatar.png" alt="Profile Picture" id="profilePic">
+                    <button class="change-avatar-btn" onclick="document.getElementById('avatarInput').click()">
+                        Change Picture
+                    </button>
+                    <input type="file" id="avatarInput" hidden accept="image/*">
+                </div>
+                <div class="profile-info">
+                    <h1 id="userName">Loading...</h1>
+                    <p id="userEmail">Loading...</p>
+                    <p class="member-since">Member since: <span id="memberSince">Loading...</span></p>
+                </div>
+            </div>
+
+            <div class="profile-sections">
+                <div class="section personal-info">
+                    <h2>Personal Information</h2>
+                    <form id="personalInfoForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" name="address" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Update Information</button>
+                    </form>
+                </div>
+
+                <div class="section security">
+                    <h2>Security Settings</h2>
+                    <form id="securityForm">
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" id="currentPassword" name="currentPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" id="newPassword" name="newPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm New Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword">
+                        </div>
+                        <button type="submit" class="btn primary-btn">Change Password</button>
+                    </form>
+                </div>
+
+                <div class="section preferences">
+                    <!-- <h2>Preferences</h2> -->
+                    <form id="preferencesForm">
+                        <div class="form-group">
+                            <label>
+                                <!-- <input type="checkbox" id="emailNotifications" name="emailNotifications"> -->
+                                <!-- Email Notifications -->
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <!-- <input type="checkbox" id="smsNotifications" name="smsNotifications"> -->
+                                <!-- SMS Notifications -->
+                            </label>
+                        </div>
+                        <!-- <button type="submit" class="btn primary-btn">Save Preferences</button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/profile.js"></script>
+</body>
+</html>
